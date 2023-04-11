@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | JoyGame</title>
+    <title>Unity WebGL Player | ART Gallery Joystick Showcase</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1280 height=720></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">JoyGame</div>
+        <div id="unity-build-title">ART Gallery Joystick Showcase</div>
       </div>
     </div>
     <script>
@@ -63,7 +63,7 @@
         codeUrl: buildUrl + "/JoyGameDemo.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "GetJoystick",
-        productName: "JoyGame",
+        productName: "ART Gallery Joystick Showcase",
         productVersion: "0.1.0",
         showBanner: unityShowBanner,
       };
@@ -93,10 +93,11 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1280px";
+        canvas.style.height = "720px";
       }
 
+      canvas.style.background = "url('" + buildUrl + "/JoyGameDemo.jpg.unityweb') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
